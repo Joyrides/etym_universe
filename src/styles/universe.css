@@ -1,0 +1,182 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(40, 60, 120, 0.35), transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(80, 40, 120, 0.3), transparent 60%),
+    #05060f;
+  color: #e6e8f0;
+  overflow: hidden;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.app-header {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  z-index: 10;
+  pointer-events: none;
+}
+.app-header h1 {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+.app-header .subtitle {
+  font-size: 12px;
+  color: rgba(200, 205, 230, 0.5);
+}
+
+.search-bar {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+.search-bar input {
+  width: 260px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(15, 18, 35, 0.8);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+.search-bar input:focus {
+  border-color: rgba(120, 180, 255, 0.6);
+}
+.search-bar button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(120, 180, 255, 0.4);
+  background: rgba(120, 180, 255, 0.15);
+  color: #cfe0ff;
+  cursor: pointer;
+}
+.search-bar button:hover {
+  background: rgba(120, 180, 255, 0.25);
+}
+
+.universe {
+  position: absolute;
+  inset: 0;
+}
+
+.detail-panel {
+  position: absolute;
+  top: 70px;
+  right: 16px;
+  width: 280px;
+  max-height: calc(100% - 90px);
+  overflow: auto;
+  background: rgba(12, 15, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 16px;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+}
+.detail-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.detail-head h2 {
+  font-size: 20px;
+  flex: 1;
+}
+.detail-panel h3 {
+  margin: 14px 0 6px;
+  font-size: 13px;
+  color: rgba(200, 205, 230, 0.6);
+}
+.detail-panel ul {
+  list-style: none;
+}
+.detail-panel li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.detail-panel li strong {
+  margin-right: 6px;
+}
+.meaning {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #cfd4ea;
+}
+/* 详细释义：长文本排版（面板本身可滚动） */
+.meaning.detailed {
+  line-height: 1.75;
+  text-align: justify;
+  font-size: 13.5px;
+  color: #d7dcf2;
+}
+.etymon-meaning {
+  color: rgba(200, 205, 230, 0.55);
+  font-size: 13px;
+}
+.weight {
+  float: right;
+  font-size: 12px;
+  color: rgba(255, 213, 79, 0.8);
+}
+.badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.badge.word {
+  background: rgba(79, 195, 247, 0.2);
+  color: #4fc3f7;
+}
+.badge.root {
+  background: rgba(255, 213, 79, 0.18);
+  color: #ffd54f;
+}
+.badge.prefix {
+  background: rgba(186, 104, 200, 0.18);
+  color: #ce93d8;
+}
+.badge.suffix {
+  background: rgba(102, 187, 106, 0.18);
+  color: #81c784;
+}
+.close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #8a8fa8;
+  font-size: 20px;
+  cursor: pointer;
+}
+.close:hover {
+  color: #fff;
+}
